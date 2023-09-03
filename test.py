@@ -25,15 +25,15 @@ def main():
     st.write("Enter the following details to predict your credit score:")
     
     input_data = {
-        'LIMIT_BAL': st.number_input("LIMIT_BAL", value=420000.0),
-        'EDUCATION': st.number_input("EDUCATION", value=2.0),
+        'LIMIT_BAL': st.number_input("Credit_Amount", value=420000.0),
+        'EDUCATION': st.number_input("EDUCATION (1: post Graduate, 2: graduate, 3: High school, 4: other", value=2.0),
         'AGE': st.number_input("AGE", value=37.0),
-        'PAY_0': st.number_input("PAY_0", value=0.0),
-        'PAY_2': st.number_input("PAY_2", value=0.0),
-        'BILL_AMT1': st.number_input("BILL_AMT1", value=10000.0),
-        'BILL_AMT2': st.number_input("BILL_AMT2", value=10000.0),
-        'PAY_AMT1': st.number_input("PAY_AMT1", value=70000.0),
-        'PAY_AMT2': st.number_input("PAY_AMT2", value=1846.0),
+        'PAY_0': st.number_input("PAY (repayment status in previous month)", value=0.0),
+        'PAY_2': st.number_input("PAY_2 (repayment status in last 2nd month)", value=0.0),
+        'BILL_AMT1': st.number_input("BILL_AMT1 (Bill statement in previous month)", value=10000.0),
+        'BILL_AMT2': st.number_input("BILL_AMT2 (Bill statement in last 2nd month)", value=10000.0),
+        'PAY_AMT1': st.number_input("PAY_AMT1 (Payment received for last month)", value=70000.0),
+        'PAY_AMT2': st.number_input("PAY_AMT2 (Payment received for last 2nd month)", value=1846.0),
     }
     
     input_df = pd.DataFrame(input_data,index=[0])
